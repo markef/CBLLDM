@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondoapp"
+    tools:context=".Contacte">
+
+    <LinearLayout
+        android:id="@+id/linearHeader"
+        android:layout_width="288dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="CONTACTE I UBICACIÓ"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|center">
+            <Button
+                android:id="@+id/bTback"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/button_rounded_1"
+                android:drawableEnd="@drawable/ic_arrow_back_black_24dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bTcallIvan"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_rounded_1"
+        android:drawableStart="@drawable/ic_phone_black_24dp"
+        android:onClick="callIvan"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="COORDINACIÓ TÈCNICA"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearHeader" />
+
+    <Button
+        android:id="@+id/bTcallFrank"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_rounded_1"
+        android:drawableStart="@drawable/ic_phone_black_24dp"
+        android:onClick="callFerran"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="DIRECCIÓ TÈCNICA"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bTcallIvan" />
+
+    <Button
+        android:id="@+id/bTcallRafa"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_rounded_1"
+        android:drawableStart="@drawable/ic_phone_black_24dp"
+        android:onClick="callMontse"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="DIRECCIÓ GENERAL"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bTcallFrank" />
+
+    <Button
+        android:id="@+id/bTcallPavello"
+        android:layout_width="288dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_rounded_1"
+        android:onClick="callPavello"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="PAVELLÓ D'ESPORTS"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bTcallRafa"
+        android:drawableStart="@drawable/ic_phone_black_24dp"/>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bTcallPavello">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="Carrer Jaume I, 32, 08186"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimaryDark"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

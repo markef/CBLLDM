@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+
+        android:id="@+id/bgmain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondoapp"/>
+
+    <com.jetradarmobile.snowfall.SnowfallView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:snowflakesNum="250"
+        app:snowflakeAlphaMin="150"
+        app:snowflakeAlphaMax="255"
+        app:snowflakeAngleMax="5"
+        app:snowflakeSizeMin="8dp"
+        app:snowflakeSizeMax="32dp"
+        app:snowflakeSpeedMin="4"
+        app:snowflakeSpeedMax="12"
+        app:snowflakesFadingEnabled="true"
+        app:snowflakesAlreadyFalling="false"
+        app:snowflakeImage="@drawable/snowflake"/>
+
+    <!--<VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>-->
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLogo"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/ripotrans"/>-->
+
+        <ImageView
+            android:id="@+id/iVlogotip"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/logonadal" />
+
+        <!--<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:src="@drawable/cblldm"/>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutBaseline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/bgmain"
+        app:layout_constraintEnd_toEndOf="@+id/bgmain"
+        app:layout_constraintStart_toStartOf="@+id/bgmain"
+        app:layout_constraintTop_toTopOf="@+id/bgmain">
+
+        <Button
+            android:id="@+id/bTeba"
+            android:layout_width="288dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_rounded_1"
+            android:drawableStart="@drawable/eba"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="PRIMER EQUIP"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/bTequips"
+            android:layout_width="288dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_rounded_1"
+            android:drawableStart="@drawable/ic_people_black_24dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="EQUIPS 2020 - 2021"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/bTrrss"
+            android:layout_width="288dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_rounded_1"
+            android:drawableStart="@drawable/ic_rss_feed_black_24dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="XARXES SOCIALS"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/bTcontacte"
+            android:layout_width="288dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_rounded_1"
+            android:drawableStart="@drawable/ic_message_black_24dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="CONTACTE I UBICACIÓ"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/bTtenda"
+            android:layout_width="288dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_rounded_1"
+            android:drawableStart="@drawable/ic_shopping_cart_black_24dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="MERCHANDISING"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/bThorari"
+            android:layout_width="288dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_rounded_1"
+            android:drawableStart="@drawable/covid"
+            android:onClick="descarregarHorari"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="HORARIS COVID-19"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/semiBlack"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/bgmain">
+
+        <TextView
+            android:id="@+id/tVinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="24dp"
+            android:textColor="@android:color/white"
+            android:drawableStart="@drawable/ic_baseline_info_24"
+            android:text="CB LLIÇÀ D'AMUNT 2020-2021©" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
